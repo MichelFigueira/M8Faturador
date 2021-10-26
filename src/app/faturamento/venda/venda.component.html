@@ -1,0 +1,66 @@
+<app-top-page title="Venda Rápida"></app-top-page>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Itens</span>
+          <span class="badge badge-secondary badge-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let produto of produtos">
+            <div>
+              <h6 class="my-0">{{produto.titulo}}</h6>
+            </div>
+            <span class="text-muted">{{produto.valor}}</span>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total</span>
+            <strong>R$ 12.500</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="% Desconto">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-secondary">Aplicar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3">Dados Cliente</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nome</label>
+              <input type="text" class="form-control" id="nome" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Campo Nome é obrigatório
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Sobrenome</label>
+              <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Campo Sobrenome é obrigatório
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+            <div class="invalid-feedback">
+              Informe um e-mail válido.
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Finalizar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
